@@ -1,0 +1,13 @@
+﻿@model Book
+
+<div>
+    <div class="card" style="width: 28rem;">
+        <div class="card-body bg-light">
+            <h5 class="card-title text-light bg-dark p-2">@Model.BookTitle</h5>
+            <h6 class="card-subtitle mb-2 text-muted">@Model.AuthorFirstName @Model.AuthorLastName</h6>
+            <p class="card-text">Classification: @Model.Classification, Category: @Model.Category, ISBN: @Model.ISBN, Pages: @Model.Pages</p>
+            <a href="#" class="card-link">@Model.Publisher</a>
+            <button type="button" class="btn btn-secondary float-right">@Model.Price</button>
+        </div>
+    </div>
+</div>
