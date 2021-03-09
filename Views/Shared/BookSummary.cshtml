@@ -1,0 +1,19 @@
+﻿@model Book
+
+<div>
+    <div class="card" style="width: 28rem;">
+        <div class="card-body bg-light">
+            <h5 class="card-title text-light bg-dark p-2">@Model.BookTitle</h5>
+            <h6 class="card-subtitle mb-2 text-muted">@Model.AuthorFirstName @Model.AuthorLastName</h6>
+            <p class="card-text">Classification: @Model.Classification, Category: @Model.Category, ISBN: @Model.ISBN, Pages: @Model.Pages</p>
+            <a href="#" class="card-link">@Model.Publisher</a>
+            <form id="@Model.BookId" asp-page="/Purchase" method="post">
+                <input type="hidden" asp-for="BookId" />
+                <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+                <button type="submit" class="btn btn-secondary float-right">
+                    Add to Cart - @Model.Price
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

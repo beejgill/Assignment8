@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=content-width" />
+    <title>Bookstore</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Bookstore</span>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <vc:navigation-menu />
+            </div>
+            <div class="col-7">
+                @RenderBody()
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
